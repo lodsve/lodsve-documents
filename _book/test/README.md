@@ -1,2 +1,0 @@
-# lodsve-test
-
