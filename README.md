@@ -92,8 +92,8 @@ Run command `mvn idea:idea` or `mvn eclipse:eclipse` in the root folder.
 The `Lodsve Framework` is released under version 2.0 of the [Mozilla Public License][].
 
 ## Donate
-![AliPay](http://lodsve.github.io/lodsve-framework/imgs/alipay.png "支付宝")
-![WeChat](http://lodsve.github.io/lodsve-framework/imgs/wechat.jpg "微信")
+<img src="http://lodsve.github.io/lodsve-framework/imgs/alipay.png" alt="AliPay" title="支付宝" style="width: 49.5%"/>
+<img src="http://lodsve.github.io/lodsve-framework/imgs/wechat.jpg" alt="WeChat" title="微信" style="width: 49.5%"/>
 
 [Mozilla Public License]: http://opensource.org/licenses/MPL-2.0
 [CHANGELOG]: https://github.com/lodsve/lodsve-framework/blob/master/CHANGELOG.md
