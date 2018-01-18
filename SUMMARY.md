@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-    *[Changelog](changelog.md)
+    * [Changelog](changelog.md)
 * [lodsve-3rd](3rd/README.md)
 * [lodsve-all](all/README.md)
 * [lodsve-amqp](amqp/README.md)
