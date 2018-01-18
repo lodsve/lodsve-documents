@@ -1,8 +1,11 @@
 # Summary
 
-* [Introduction](README.md)
-    * [Changelog](changelog.md)
+* [简介](README.md)
+    * [更新日志](introduction/changelog.md)
+    * [历史](introduction/history.md)
 * [lodsve-3rd](3rd/README.md)
+    * [Alibaba FastDFS Java Client](3rd/fastdfs.md)
+    * [P6Spy](3rd/p6psy.md)
 * [lodsve-all](all/README.md)
 * [lodsve-amqp](amqp/README.md)
 * [lodsve-cache](amqp/README.md)
@@ -18,6 +21,4 @@
 * [lodsve-web](web/README.md)
 * [lodsve-wechat](wechat/README.md)
 * [lodsve-workflow](workflow/README.md)
-
-
 
