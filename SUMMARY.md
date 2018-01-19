@@ -8,6 +8,8 @@
     * [P6Spy](3rd/p6psy.md)
 * [lodsve-all](all/README.md)
 * [lodsve-amqp](amqp/README.md)
+    * [如何使用](amqp/how_to_use.md)
+    * [备注](amqp/remark.md)
 * [lodsve-cache](amqp/README.md)
 * [lodsve-core](amqp/README.md)
 * [lodsve-dfs](dfs/README.md)
