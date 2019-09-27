@@ -1,5 +1,14 @@
 ![LOGO](images/logo.png "lodsve-framework")
 
+[![Build Status](https://travis-ci.org/lodsve/lodsve-framework.svg?branch=master)](https://travis-ci.org/lodsve/lodsve-framework)
+[![License](https://img.shields.io/badge/license-GPLv3-yellowgreen.svg)]()
+[![Maven Central](https://img.shields.io/maven-central/v/com.lodsve/lodsve-framework.svg)](https://search.maven.org/artifact/com.lodsve/lodsve-framework)
+[![GitHub stars](https://img.shields.io/github/stars/lodsve/lodsve-framework.svg)](https://github.com/lodsve/lodsve-framework/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/lodsve/lodsve-framework.svg)](https://github.com/lodsve/lodsve-framework/network)
+[![GitHub issues](https://img.shields.io/github/issues/lodsve/lodsve-framework.svg)](https://github.com/lodsve/lodsve-framework/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/lodsve/lodsve-framework.svg)](https://github.com/lodsve/lodsve-framework/pulls)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flodsve%2Flodsve-framework.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Flodsve%2Flodsve-framework?ref=badge_shield)
+
 ## lodsve-framework
 My development tools, it encapsulates some open source projects, and better facilitate the conduct of Java Web development.
 
@@ -10,34 +19,36 @@ My development tools, it encapsulates some open source projects, and better faci
 1. Base on some open source framework. It encapsulates some classes and methods to make more convenient for developers.
 2. It consists of the following modules:
     - lodsve-3rd
-    - lodsve-amqp
+    - lodsve-all
     - lodsve-cache
     - lodsve-core
+    - lodsve-dependencies
     - lodsve-dfs
+    - lodsve-framework-bom
     - lodsve-mongodb
     - lodsve-mybatis
+    - lodsve-rabbitmq
+    - lodsve-rdbms
     - lodsve-redis
+    - lodsve-rocketmq
     - lodsve-search
     - lodsve-security
     - lodsve-test
     - lodsve-validate
     - lodsve-web
     - lodsve-wechat
-    - lodsve-workflow
 
 ## How To Use
 
     <dependency>
         <groupId>com.lodsve</groupId>
-        <artifactId>lodsve-framework</artifactId>
+        <artifactId>lodsve-framework-bom</artifactId>
         <version>${lodsve.version}</version>
         <type>pom</type>
         <scope>import</scope>
     </dependency>
     
 ## About release
-I will release a new stable version at `27th every month`. And publish a snapshot version every `Tuesday night`!
-
 Version No. like `MAJOR.MINOR.PATCH-RELEASE/ALPHA/BETA`.
 
 - `MAJOR` version when I make incompatible API changes,
@@ -48,12 +59,14 @@ Version No. like `MAJOR.MINOR.PATCH-RELEASE/ALPHA/BETA`.
 - `BETA` means just for testing.    
     
 ## Newest version
-Now the newest and stable version is `2.6.1-RELEASE`.
+Now the newest and stable version is `2.7.1-RELEASE`.
 
 You can also find the newest version in maven central: `http://repo1.maven.org/maven2/com/lodsve/lodsve-framework/`.
     
 ## Documentation
 See the current [reference docs][].
+
+See the master branch [Api Docs][].
 
 ## Check out sources
 `git clone git@github.com:lodsve/lodsve-framework.git`
@@ -66,7 +79,7 @@ See the current [reference docs][].
 
 ## Import sources into your IDE
 Run command `mvn idea:idea` or `mvn eclipse:eclipse` in the root folder.
-> **Note:** Per the prerequisites above, ensure that you have JDK 7 and Maven 3.3.X configured properly in your IDE.
+> **Note:** Per the prerequisites above, ensure that you have `JDK 8` and `Maven 3.3.X` and `Lombok Plugin` configured properly in your IDE.
 
 1. Config your Git 
     
@@ -79,6 +92,9 @@ Run command `mvn idea:idea` or `mvn eclipse:eclipse` in the root folder.
     - Eclipse: Open Settings-General-Workspace, modify `Text file encoding` as `UTF-8`
     - IDE: Open Setting-Editor-Code Style, modify `line delimiter` as `Unix and OS X(\n)`
     - IDE: Open Setting-Editor-File encoding, modify all `Encoding` as `UTF-8` and `with NO BOM`
+3. Required IDE Plugins(Both Eclipse and Intellij IDEA):
+    - Alibaba Java Coding Guidelines
+    - Lombok plugin    
 
 ## Change History
 [CHANGELOG][]
@@ -89,15 +105,14 @@ Run command `mvn idea:idea` or `mvn eclipse:eclipse` in the root folder.
 3. Blog: [Blog][] [OSChina][]
 
 ## License
-The `Lodsve Framework` is released under version 2.0 of the [Mozilla Public License][].
+The `Lodsve Framework` is released under version 3.0 of the [GNU General Public License][].
 
-## Donate
-<img src="images/alipay.png" alt="AliPay" title="支付宝" style="width: 49.5%"/>
-<img src="images/wechat.jpg" alt="WeChat" title="微信" style="width: 49.5%"/>
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flodsve%2Flodsve-framework.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Flodsve%2Flodsve-framework?ref=badge_large)
 
-[Mozilla Public License]: http://opensource.org/licenses/MPL-2.0
+[GNU GENERAL PUBLIC LICENSE]: https://opensource.org/licenses/GPL-3.0
 [CHANGELOG]: https://github.com/lodsve/lodsve-framework/blob/master/CHANGELOG.md
-[Blog]: http://www.lodsve.com
-[OSChina]: http://my.oschina.net/sunhaojava/blog
+[Blog]: https://www.crazy-coder.cn
+[OSChina]: https://my.oschina.net/sunhaojava
 [867885140]: http://wpa.qq.com/msgrd?v=3&uin=867885140&site=qq&menu=yes
-[reference docs]: http://lodsve.github.io/lodsve-framework/
+[reference docs]: https://helps.lodsve.com/
+[Api Docs]: https://apidoc.gitee.com/lodsve/lodsve-framework/
