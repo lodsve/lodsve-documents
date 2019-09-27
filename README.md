@@ -1,6 +1,6 @@
 ![LOGO](images/logo.png "lodsve-framework")
 
-## lodsve-framework1
+## lodsve-framework
 My development tools, it encapsulates some open source projects, and better facilitate the conduct of Java Web development.
 
 ## What is `lodsve`
