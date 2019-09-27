@@ -1,6 +1,116 @@
 # 更新日志
 
-## V2.6.2-SNAPSHOT
+## 2.7.5-RELEASE
+1. 增加`lodsve-dependencies`来管理所有的依赖版本
+2. 新增`lodsve-framework-bom`
+3. 调整lodsve-amqp -> lodsve-rabbitmq
+4. 新增lodsve-rocketmq
+
+## 2.7.4-RELEASE
+1. 升级solr和fastjson的版本
+2. 清理未使用的依赖
+3. 增加发布本地Maven私服
+
+## 2.7.2-RELEASE(元旦特别纪念版)
+1. 整理配置文件，并给每一个配置项添加注释
+2. springfox移除获取path
+3. 修改日志，将打印banner之前的日志全部去掉
+4. 优化mybatis获取TypeHandler
+5. 升级spring.data.mongodb 并修正一些问题
+6. 解决relaxed bind绑定Map时的一个bug
+7. flyway支持对多数据源数据库版本控制 fixed #30
+8. 完善RelaxedBindFactory中的报错信息
+9. 删除依赖commons-fileupload
+
+## 2.7.1-RELEASE
+1. 日志框架改为logback
+2. 集成了travis
+3. XXXProperties类的setter、getter方法都用Lombok的注解@Setter、@Getter实现
+4. 使用aop来实现web每次请求打印参数及返回值
+5. 美化readme，增加一些新的说明，修改链接
+6. fixed bugs
+
+## 2.7.0-RELEASE
+1. 改进配置文件自动装配
+    - map中的key用[]包裹起来
+2. 重构mail部分，基于spring mail实现
+3. 还原WeChat部分，并重构
+4. 抽出rdbms部分（数据源相关）
+5. 增加mybatis的通用dao、乐观锁插件
+6. 升级相关组件
+    - spring
+    - junit 
+    - jackson
+    - springfox
+    - commons-lang3
+    - mybatis
+    - 
+7. 引入相关组件
+    - vjtools    
+    - guava
+8. fixed bugs    
+
+## 2.6.7-RELEASE
+1. 支持amqp注解，具体配置请参考`rabbit.properties`文件
+2. 使用EnableXXX的配置文件都从注解中引入，其余通过spring.factories引入
+3. 修改validate加载错误文件的一个bug
+
+## 2.6.6-RELEASE
+1. 整理配置文件，对必填项加上@Required
+2. 增加事务开关
+3. p6spy改成profiles启用，优化mybatis加载数据源
+4. 修改base64加解密的实现
+5. 优化banner,可以在logger中打印
+6. RelaxedBindFactory支持枚举类型
+7. 获取json解析的工厂
+8. 简化web.xml
+9. 删除了wechat和workflow
+
+
+## 2.6.5-RELEASE
+1. 重构mybatis,取消自动生成beans
+2. 整理mongodb
+3. 多数据源配置连接池也是多个配置
+4. 工具类重构、修改
+    - 修改ObjectUtils相关
+    - 将web相关utils移到lodsve-web中
+    - 添加RestUtils
+5. lodsve-web添加一层包路径web
+6. params路径加载用WebApplicationInitializer实现
+7. 优化验证码
+    ```
+    配置（server.properties）
+    lodsve.server.enable-captcha=false
+    lodsve.server.captcha-key=captchaKey
+    lodsve.server.path=/captcha
+    
+    验证码图片路径  ${contextPath}/captcha
+    校验验证码   lodsve.web.utils.CaptchaUtils.validate(request, code)
+    ```
+
+## 2.6.4.1-RELEASE
+为软创开发 多数据源配置连接池也是多个配置
+
+## 2.6.4-RELEASE
+1. 多数据源支持多个数据库
+2. @ConditionalOnProperty 可以使用RelaxedBind
+3. 优化mybatis、druid的配置
+4. 简化mongodb注解
+5. fix bug
+
+## 2.6.3-SNAPSHOT
+1. 修改autoconfiguration-->relaxedbind
+2. 修改PropertiesConfigurationFactory-->RelaxedBindFactory
+3. 解决运行maven出现警告
+4. 规范maven pom的写法
+5. 添加copyright
+6. 重构security
+7. 3rd包使用shade插件去修改p6spy中的代码
+8. 实现Ordered接口确保banner第一个被打印出来
+9. 优化cache部分代码
+10. 添加Windows下批处理文件
+
+## 2.6.2-SNAPSHOT
 1. 添加一些脚本
 2. 添加webservice的支持
     - @EnableWebService
@@ -9,10 +119,10 @@
     - 其他配置在webservice.properties中配置
     - 修改lodsve-all使用的shade插件
 
-## V2.6.1-RELEASE
+## 2.6.1-RELEASE
 修改maven-deploy时的一个问题，lodsve-all没有文件，生成javadoc会报错
 
-## V2.6.0-RELEASE
+## 2.6.0-RELEASE
 修改GroupId，重新上传构建，并且定义新的发布规则及版本号
 1. lodsve-3d: 无
 2. lodsve-all: 新增所有子模块的聚合
@@ -193,10 +303,9 @@
 1. 项目进行重构
 2. 合并一些基础项目到message-base中
 3. 重构spring的加载方式,eg:
-
-	```
-	<!-- spring配置 start -->
-	...
+    ```
+    <!-- spring配置 start -->
+    ...
     <servlet>
         <servlet-name>spring</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -211,7 +320,7 @@
     </servlet>
     ...
     <!-- spring配置 start -->
-
+    
     ApplicationConfiguration.java
     @Configuration
     // ...
@@ -220,7 +329,7 @@
     public class ApplicationConfiguration {
         // ...
     }
-	```
+    ```
 
 ## V2.3.4
 1. 添加message-mongodb,对mongodb的支持
@@ -254,26 +363,27 @@
 
 ## V2.0-GA
 1. 模块拆分完成
-
-		message-amqp
-		message-base
-		message-cache
-		message-config
-		message-datasource
-		message-email
-		message-event
-		message-exception
-		message-jdbc
-		message-json
-		message-logger
-		message-mvc
-		message-search
-		message-security
-		message-tags
-		message-template
-		message-test
-		message-utils
-		message-validate
+    ```
+    message-amqp
+    message-base
+    message-cache
+    message-config
+    message-datasource
+    message-email
+    message-event
+    message-exception
+    message-jdbc
+    message-json
+    message-logger
+    message-mvc
+    message-search
+    message-security
+    message-tags
+    message-template
+    message-test
+    message-utils
+    message-validate
+    ```
 2. 编写使用说明文档
 
 ## V1.0-GA
