@@ -40,13 +40,13 @@ My development tools, it encapsulates some open source projects, and better faci
 
 ## How To Use
 
-    <dependency>
-        <groupId>com.lodsve</groupId>
-        <artifactId>lodsve-framework-bom</artifactId>
-        <version>${lodsve.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-    </dependency>
+        <dependency>
+            <groupId>com.lodsve</groupId>
+            <artifactId>lodsve-framework-bom</artifactId>
+            <version>${lodsve.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
     
 ## About release
 Version No. like `MAJOR.MINOR.PATCH-RELEASE/ALPHA/BETA`.
