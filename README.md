@@ -40,7 +40,7 @@ My development tools, it encapsulates some open source projects, and better faci
 
 ## How To Use
 ```
-< dependency\>
+<dependency\>
     <groupId>com.lodsve</groupId>
     <artifactId>lodsve-framework-bom</artifactId>
     <version>${lodsve.version}</version>
