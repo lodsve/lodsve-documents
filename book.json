@@ -1,8 +1,71 @@
 {
-    "plugins": ["disqus"],
+    "plugins": [
+        "theme-comscore",
+        "-highlight",
+        "prism",
+        "github",
+        "-sharing",
+        "splitter",
+        "copy-code-button",
+        "expandable-chapters-small",
+        "book-summary-scroll-position-saver",
+        "donate",
+        "anchors",
+        "tbfed-pagefooter",
+        "-sharing", 
+        "sharing-plus",
+        "anchor-navigation-ex"
+    ],
     "pluginsConfig": {
-        "disqus": {
-            "shortName": "lodsve-framework"
+        "theme-default": {
+            "showLevel": true
+        },
+        "prism": {
+            "css": [
+                "prismjs/themes/prism-tomorrow.css"
+            ]
+        },
+        "github": {
+            "url": "https://github.com/lodsve/lodsve-framework"
+        },
+        "donate": {
+            "wechat": "https://raw.githubusercontent.com/lodsve/lodsve-documents/master/images/wechat.jpg",
+            "alipay": "https://raw.githubusercontent.com/lodsve/lodsve-documents/master/images/alipay.png",
+            "title": "请我喝一杯咖啡",
+            "button": "好的",
+            "alipayText": "支付宝捐赠",
+            "wechatText": "微信捐赠"
+        },
+        "tbfed-pagefooter": {
+            "copyright": "Copyright &copy 2012-2020 <a href='https://www.crazy-coder.cn' target='_blank'>孙昊</a> <a href=\"http://www.beian.miit.gov.cn/?spm=a2c4g.11186623.2.16.2b667dc6fSPvXG\" target=\"_blank\" rel=\"noopener\">苏ICP备20017156号-1</a>",
+            "modify_label": "修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "sharing": {
+            "qq": true,
+            "qzone": true,
+            "weibo": true
+        },
+        "anchor-navigation-ex": {
+            "showLevel": true,
+            "associatedWithSummary": false,
+            "printLog": false,
+            "multipleH1": true,
+            "mode": "float",
+            "showGoTop": true,
+            "float": {
+                "floatIcon": "fa fa-navicon",
+                "showLevelIcon": false,
+                "level1Icon": "fa fa-hand-o-right",
+                "level2Icon": "fa fa-hand-o-right",
+                "level3Icon": "fa fa-hand-o-right"
+            },
+            "pageTop": {
+                "showLevelIcon": false,
+                "level1Icon": "fa fa-hand-o-right",
+                "level2Icon": "fa fa-hand-o-right",
+                "level3Icon": "fa fa-hand-o-right"
+            }
         }
     }
 }
