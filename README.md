@@ -1,4 +1,4 @@
-![LOGO](images/logo.png "lodsve-framework")
+![LOGO](https://raw.githubusercontent.com/lodsve/lodsve-documents/master/images/logo.png "lodsve-framework")
 
 [![Build Status](https://travis-ci.org/lodsve/lodsve-framework.svg?branch=master)](https://travis-ci.org/lodsve/lodsve-framework)
 [![License](https://img.shields.io/badge/license-GPLv3-yellowgreen.svg)]()
@@ -37,15 +37,14 @@ My development tools, it encapsulates some open source projects, and better faci
     - lodsve-wechat
 
 ## How To Use
-```
-<dependency\>
-    <groupId>com.lodsve</groupId>
-    <artifactId>lodsve-framework-bom</artifactId>
-    <version>${lodsve.version}</version>
-    <type>pom</type>
-    <scope>import</scope>
-</dependency>
-```
+
+    <dependency>
+        <groupId>com.lodsve</groupId>
+        <artifactId>lodsve-framework-bom</artifactId>
+        <version>${lodsve.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+    </dependency>
     
 ## About release
 Version No. like `MAJOR.MINOR.PATCH-RELEASE/ALPHA/BETA`.
